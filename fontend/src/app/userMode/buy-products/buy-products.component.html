@@ -4,5 +4,10 @@
             สั่งซื้อ
         </i>
     </a>
+    <a class="btn btn-warning" role="button" style="width: 150px;" *ngIf="show1" (click)="deleteCart()">
+        <i>
+            ยกเลิกสั่งซื้อ
+        </i>
+    </a>
     <p>จำนวนที่สั้่งซื้อ : {{getTotal()}}</p>
 </div>

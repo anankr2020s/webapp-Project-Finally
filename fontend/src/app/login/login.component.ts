@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       data => {
         if(data.status == true){
           alert('เข้าระบบแล้ว')
-          //console.log('go next')
+          console.log(data._value)
         }
       },
       err =>{

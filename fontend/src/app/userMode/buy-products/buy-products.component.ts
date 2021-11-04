@@ -15,6 +15,7 @@ export class BuyProductsComponent implements OnInit {
   @Input() item: any;
   cart: cartsType = [];
   show: boolean = true;
+  show1: boolean = true;
   price: number =0;
   count: number = 0;
 
@@ -35,13 +36,42 @@ export class BuyProductsComponent implements OnInit {
     this.CartService.getFromBuy(this.item);
     this.updateMinusStock(this.item,1);
     }
-    
+  }
+
+  deleteCart(){
+    console.log("delete product"+this.item)
+    if(this.count ==0){
+      this.show1 = false;
+    }else{
+      this.count -=1;
+      this.updatePlusStock(this.item,1)
+    }
     
   }
 
   getTotal(){
     return this.count;
   }
+
+  updatePlusStock(item:any,count:any){
+    console.log(item+"--> newQ = "+count);
+    if( count === undefined) count=0;
+    this.item.quantity = this.item.quantity + count;
+
+    try {
+      this.BookService.updateBook(this.item).subscribe(
+        data => {
+          //this.products = data;
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   updateMinusStock(item:any,count:any){
     console.log(item+"--> newQ = "+count);

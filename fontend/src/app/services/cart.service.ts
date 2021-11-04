@@ -24,8 +24,6 @@ export class CartService {
     this.price -= this.carts[item].price;
     console.log("price from delete"+this.price)
     this.carts.splice(item,1);
-    
-
   }
 
   getCart(){
