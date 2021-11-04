@@ -1,0 +1,34 @@
+<app-search (messageEvent)="receivData($event)"></app-search>
+<div class="container-fluid" style="margin-top:30px">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Products</h2>
+        <div class="table-responsive-md">  
+        <table class="table table-striped table-inverse">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>ชื่อหนังสือ</th>
+                    <th>หมวดหมู่</th>
+                    <th>ราคา</th>
+                    <th>จำนวน(เล่ม)</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products; index as i">
+                    <td scope="row">{{item.name}}</td>
+                    <td>{{item.tag}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td><img [src]="item.img" style="height:150px;"></td>
+                    <td>
+                        <app-buy-products [item]="item"></app-buy-products>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <app-carts></app-carts>
+        </div>
+      </div>
+    </div>
+</div>

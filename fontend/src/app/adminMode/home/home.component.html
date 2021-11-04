@@ -1,0 +1,33 @@
+<div class="container-fluid" style="margin-top:30px">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Products</h2>
+        <div class="table-responsive-md">  
+        <table class="table table-striped table-inverse">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>รายการสั่งซื้อ</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products; index as i">
+                    
+                    <td scope="row">{{item.order}}</td>
+                    <td><div class="col" style="margin-top: 5px;">
+                        <a class="btn btn-success" role="button" style="width: 200px;" (click)="deletebook(item._id)">
+                            <i>
+                                จัดส่งแล้ว
+                            </i>
+                        </a>
+                    </div></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+</div>

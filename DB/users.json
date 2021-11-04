@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "617859b54e538da4e1176a30"
+  },
+  "username": "pote",
+  "password": "$2a$10$CZyzwO3bIwcHQgQ0/Cy1iuTvautoYX4Bp.dh3d9T.qXhWJDCvt3Yi",
+  "role": "admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617859ea4e538da4e1176a32"
+  },
+  "username": "user1",
+  "password": "$2a$10$/Dh4vql2k7GSSGq8I.E6Q.0nogne.cgAcoheoTeDvfqkutr5GE346",
+  "role": "customer",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617c44a51b099b33374aaf37"
+  },
+  "username": "koko",
+  "password": "$2a$10$AFY2K.kJdm7SuGpqFgokFelGNXKdjWAsocMkU7pQLFKMAxDlDh7Im",
+  "role": "customer",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e7a66a8d614e7ffb138e4"
+  },
+  "username": "jaja",
+  "password": "$2a$10$oVyXNQlItwxZFfX8NaUBDOjrMry9SIDjuluGVNu9T76kf3mRGRgTy",
+  "role": "customer",
+  "__v": 0
+}]
